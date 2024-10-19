@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        svg {
+            width: 20px;
+        }
+
+        .account {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background-color: #A020F0;
+            width: 150px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 10px;
+            font-family: sans-serif;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            width: 150px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #A020F0;
+            font-family: sans-serif;
+        }
+
+        @keyframes point {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zero-one {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .home,
+        .dash,
+        .profile {
+            opacity: 0;
+        }
+
+        #content {
+            display: none;
+        }
+
+        #content a {
+            width: 100%;
+            padding: 20px;
+        }
+
+        #down-arrow {
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="account">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path fill-rule="evenodd"
+                d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                clip-rule="evenodd" />
+        </svg>
+        Account
+        <svg id="down-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+            stroke="currentColor" className="size-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </svg>
+    </div>
+
+    <div class="content" id="content">
+        <a href="" class="btn " id="home">Home</a>
+        <a href="" class="btn " id="dash">Dashboard</a>
+        <a href="" class="btn " id="profile">Profile</a>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
